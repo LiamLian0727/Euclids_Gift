@@ -17,7 +17,7 @@ Training
 Evaluation
 - Install [lmms‑eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) following its official documentation. You can either:
   - Use the [`lmms-eval/`](https://github.com/EvolvingLMMs-Lab/lmms-eval) copy included in this repository; or
-  - Copy the four task folders provided under `lmms-eval/lmms_eval/tasks/` into your existing lmms‑eval setup.
+  - Copy the four task folders provided under `test/lmms_eval/tasks/` into your existing lmms‑eval setup.
 
 ## Citation
 If you find this project or the dataset helpful, please cite:
