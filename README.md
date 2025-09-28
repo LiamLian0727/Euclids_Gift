@@ -5,16 +5,18 @@ Spatial intelligence spans abilities such as visualizing and transforming shapes
 
 ![Architecture](assert/arch.png)
 
+![Gain](assert/gain.png)
+
 ## Quick Start
 
 ### 1) Environment Setup
 Training
-- Install EasyR1 following the official documentation.
+- Install [EasyR1](https://github.com/hiyouga/EasyR1) following the official documentation.
 - Install the required Python dependencies: `pip install -r requirements.txt`.
 
 Evaluation
-- Install lmms‑eval following its official documentation. You can either:
-  - Use the `lmms-eval/` copy included in this repository; or
+- Install [lmms‑eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) following its official documentation. You can either:
+  - Use the [`lmms-eval/`](https://github.com/EvolvingLMMs-Lab/lmms-eval) copy included in this repository; or
   - Copy the four task folders provided under `lmms-eval/lmms_eval/tasks/` into your existing lmms‑eval setup.
 
 ## Citation
@@ -32,4 +34,4 @@ If you find this project or the dataset helpful, please cite:
 ```
 
 ## Acknowledgements
-We thank the VeRL / EasyR1 training framework, as well as the benchmark suites Super‑CLEVR, Omni3DBench, VSI‑Bench, and MindCube.
+We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://github.com/hiyouga/EasyR1) training framework, as well as the benchmark suites [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube).
