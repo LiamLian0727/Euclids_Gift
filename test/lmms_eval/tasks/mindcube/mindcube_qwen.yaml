@@ -1,0 +1,31 @@
+dataset_path: parquet
+dataset_kwargs:
+  data_files:
+    train: /mnt/datasets/MindCube/train.parquet
+task: "mindcube_qwen"
+test_split: train
+output_type: generate_until
+doc_to_visual: !function utils.mindcube_doc_to_visual
+doc_to_text: !function utils.mindcube_doc_to_text
+doc_to_target: "solution"
+# Auxiliary arguments for the `generate` function from HF transformers library. This would be used in different models files.
+generation_kwargs:
+  max_new_tokens: 1024
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: false
+# The return value of process_results will be used by metrics
+process_results: !function utils.mindcube_process_results
+metric_list:
+  - metric: exact_match
+    aggregation: !function utils.mindcube_aggregate_results
+    higher_is_better: true
+    # ignore_case: true
+    # ignore_punctuation: true
+lmms_eval_specific_kwargs:
+  default:
+    pre_prompt: "You FIRST think step by step and then provide the final answer. The final answer MUST BE put in \\boxed{}, like \\boxed{A}."
+    post_prompt: ""
+metadata:
+  - version: 0.0

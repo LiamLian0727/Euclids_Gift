@@ -1,0 +1,31 @@
+dataset_path: parquet
+dataset_kwargs:
+  data_files:
+    train: /mnt/datasets/SuperClevr_Val/data/train-*.parquet
+task: "super_clevr"
+test_split: train
+output_type: generate_until  # 有三种输出格式
+doc_to_visual: !function utils.super_clevr_doc_to_visual
+doc_to_text: !function utils.super_clevr_doc_to_text
+doc_to_target: "solution"
+# Auxiliary arguments for the `generate` function from HF transformers library. This would be used in different models files.
+generation_kwargs:
+  max_new_tokens: 1024
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: false
+# The return value of process_results will be used by metrics
+process_results: !function utils.super_clevr_process_results
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    # ignore_case: true
+    # ignore_punctuation: true
+lmms_eval_specific_kwargs:
+  default:
+    pre_prompt: "You FIRST think step by step and then provide the final answer. The final answer MUST BE a number, single word or phrase and put in \\boxed{}."
+    post_prompt: ""
+metadata:
+  - version: 0.0
