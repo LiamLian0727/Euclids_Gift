@@ -1,7 +1,7 @@
 dataset_path: parquet
 dataset_kwargs:
   data_files:
-    train: /mnt/datasets/MindCube/train.parquet
+    train: /mnt/datasets/MindCube_lmms_eval/train.parquet
 task: "mindcube_robo"
 test_split: train
 output_type: generate_until

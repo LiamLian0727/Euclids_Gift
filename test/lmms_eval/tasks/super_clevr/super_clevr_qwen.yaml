@@ -2,7 +2,7 @@ dataset_path: parquet
 dataset_kwargs:
   data_files:
     train: /mnt/datasets/SuperClevr_Val/data/train-*.parquet
-task: "super_clevr"
+task: "super_clevr_qwen"
 test_split: train
 output_type: generate_until  # 有三种输出格式
 doc_to_visual: !function utils.super_clevr_doc_to_visual

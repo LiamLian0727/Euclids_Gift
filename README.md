@@ -13,11 +13,42 @@ Spatial intelligence spans abilities such as visualizing and transforming shapes
 Training
 - Install [EasyR1](https://github.com/hiyouga/EasyR1) following the official documentation.
 - Install the required Python dependencies: `pip install -r requirements.txt`.
+- Download the Euclid30K dataset from Hugging Face: https://huggingface.co/datasets/LiamLian0727/Euclid30K
 
 Evaluation
 - Install [lmms‑eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) following its official documentation. You can either:
   - Use the [`lmms-eval/`](https://github.com/EvolvingLMMs-Lab/lmms-eval) copy included in this repository; or
   - Copy the four task folders provided under `test/lmms_eval/tasks/` into your existing lmms‑eval setup.
+  - Download the benchmark datasets [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube); then update the dataset paths in each corresponding YAML under `test/lmms_eval/tasks/`.
+
+### 2) Training
+
+Below is an example command for training (e.g., 8 GPUs). For multi‑node multi‑GPU training, see the example script `train/dist_train.sh`.
+
+```bash
+python3 -m verl.trainer.main \
+    config=examples/config.yaml \
+    data.train_files=/mnt/datasets/Euclid30K/Euclid30K_train.parquet \
+        data.val_files=/mnt/datasets/Euclid30K/Euclid30K_val.parquet \
+        worker.actor.model.model_path=/mnt/models/Qwen2.5-VL-7B-Instruct \
+        trainer.experiment_name=EXPERIMENT_NAME \
+        worker.actor.micro_batch_size_per_device_for_update=1 \
+        worker.actor.micro_batch_size_per_device_for_experience=8 \
+        worker.actor.clip_ratio_low=0.2 \
+        worker.actor.clip_ratio_high=0.28 \
+        worker.reward.reward_function=/mnt/code/Euclids_Gift/train/euclid.py:compute_score \
+        algorithm.online_filtering=True \
+        trainer.total_epochs=10 \
+        trainer.n_gpus_per_node=8 \
+        trainer.nnodes=2 \
+        trainer.save_checkpoint_path=/mnt/models/Qwen2.5-VL-7B-Euclid
+```
+
+### 3) Evaluation
+
+Use [`test/eval_qwen.sh`](test/eval_qwen.sh), [`test/eval_robo.sh`](test/eval_robo.sh), and [`test/eval_euclid.sh`](test/eval_euclid.sh) to evaluate the Qwen2.5‑VL series, the RoboBrain 2.0 series, and Euclid models trained on Euclid30K, respectively.
+
+Before running these scripts, set `model_path` in each script to the path of the model you want to evaluate.
 
 ## Citation
 If you find this project or the dataset helpful, please cite:
