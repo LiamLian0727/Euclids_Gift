@@ -19,7 +19,7 @@ Evaluation
 - Install [lmms‑eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) following its official documentation. You can either:
   - Use the [`lmms-eval/`](https://github.com/EvolvingLMMs-Lab/lmms-eval) copy included in this repository; or
   - Copy the four task folders provided under `test/lmms_eval/tasks/` into your existing lmms‑eval setup.
-  - Download the benchmark datasets [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube_lmms_eval](https://huggingface.co/datasets/LiamLian0727/MindCube_lmms_eval); then update the dataset paths in each corresponding YAML under `test/lmms_eval/tasks/`.
+- Download the benchmark datasets [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube_lmms_eval](https://huggingface.co/datasets/LiamLian0727/MindCube_lmms_eval); then update the dataset paths in each corresponding YAML under `test/lmms_eval/tasks/`.
 
 ### 2) Training
 
