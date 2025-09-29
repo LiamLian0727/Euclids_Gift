@@ -46,6 +46,8 @@ python3 -m verl.trainer.main \
 
 ### 3) Evaluation
 
+![Evaluation](assert/eval.png)
+
 Use [`test/eval_qwen.sh`](test/eval_qwen.sh), [`test/eval_robo.sh`](test/eval_robo.sh), and [`test/eval_euclid.sh`](test/eval_euclid.sh) to evaluate the Qwen2.5‑VL series, the RoboBrain 2.0 series, and Euclid models trained on Euclid30K, respectively.
 
 Before running these scripts, set `model_path` in each script to the path of the model you want to evaluate.
@@ -63,8 +65,6 @@ If you find this project or the dataset helpful, please cite:
     url={https://arxiv.org/abs/2505.09xxxx}
 }
 ```
-
-![Evaluation](assert/eval.png)
 
 ## Acknowledgements
 We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://github.com/hiyouga/EasyR1) training framework, as well as the benchmark suites [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube).
