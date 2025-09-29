@@ -19,7 +19,7 @@ Evaluation
 - Install [lmms‑eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) following its official documentation. You can either:
   - Use the [`lmms-eval/`](https://github.com/EvolvingLMMs-Lab/lmms-eval) copy included in this repository; or
   - Copy the four task folders provided under `test/lmms_eval/tasks/` into your existing lmms‑eval setup.
-  - Download the benchmark datasets [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube); then update the dataset paths in each corresponding YAML under `test/lmms_eval/tasks/`.
+  - Download the benchmark datasets [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube_lmms_eval](https://huggingface.co/datasets/LiamLian0727/MindCube_lmms_eval); then update the dataset paths in each corresponding YAML under `test/lmms_eval/tasks/`.
 
 ### 2) Training
 
@@ -29,19 +29,19 @@ Below is an example command for training (e.g., 8 GPUs). For multi‑node multi�
 python3 -m verl.trainer.main \
     config=examples/config.yaml \
     data.train_files=/mnt/datasets/Euclid30K/Euclid30K_train.parquet \
-        data.val_files=/mnt/datasets/Euclid30K/Euclid30K_val.parquet \
-        worker.actor.model.model_path=/mnt/models/Qwen2.5-VL-7B-Instruct \
-        trainer.experiment_name=EXPERIMENT_NAME \
-        worker.actor.micro_batch_size_per_device_for_update=1 \
-        worker.actor.micro_batch_size_per_device_for_experience=8 \
-        worker.actor.clip_ratio_low=0.2 \
-        worker.actor.clip_ratio_high=0.28 \
-        worker.reward.reward_function=/mnt/code/Euclids_Gift/train/euclid.py:compute_score \
-        algorithm.online_filtering=True \
-        trainer.total_epochs=10 \
-        trainer.n_gpus_per_node=8 \
-        trainer.nnodes=2 \
-        trainer.save_checkpoint_path=/mnt/models/Qwen2.5-VL-7B-Euclid
+    data.val_files=/mnt/datasets/Euclid30K/Euclid30K_val.parquet \
+    worker.actor.model.model_path=/mnt/models/Qwen2.5-VL-7B-Instruct \
+    trainer.experiment_name=EXPERIMENT_NAME \
+    worker.actor.micro_batch_size_per_device_for_update=1 \
+    worker.actor.micro_batch_size_per_device_for_experience=8 \
+    worker.actor.clip_ratio_low=0.2 \
+    worker.actor.clip_ratio_high=0.28 \
+    worker.reward.reward_function=/mnt/code/Euclids_Gift/train/euclid.py:compute_score \
+    algorithm.online_filtering=True \
+    trainer.total_epochs=10 \
+    trainer.n_gpus_per_node=8 \
+    trainer.nnodes=2 \
+    trainer.save_checkpoint_path=/mnt/models/Qwen2.5-VL-7B-Euclid
 ```
 
 ### 3) Evaluation
@@ -63,6 +63,8 @@ If you find this project or the dataset helpful, please cite:
     url={https://arxiv.org/abs/2505.09xxxx}
 }
 ```
+
+![Evaluation](assert/eval.png)
 
 ## Acknowledgements
 We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://github.com/hiyouga/EasyR1) training framework, as well as the benchmark suites [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube).
