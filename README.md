@@ -1,4 +1,10 @@
 # Euclid’s Gift: Enhancing Spatial Perception and Reasoning in Vision‑Language Models via Geometric Surrogate Tasks
+[![issues](https://img.shields.io/github/issues/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/issues)
+[![forks](https://img.shields.io/github/forks/LiamLian0727/Euclids_Gift?style=flat&color=orange)](https://github.com/LiamLian0727/Euclids_Gift/fork)
+[![stars](https://img.shields.io/github/stars/LiamLian0727/Euclids_Gift?style=flat&color=red)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+[![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/LiamLian0727/Euclid30K)
+[![arXiv](https://img.shields.io/badge/arXiv-2509.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2509.xxxxx)
+[![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
 
 ## Abstract
 Spatial intelligence spans abilities such as visualizing and transforming shapes, mental rotation, reasoning about relative positions and containment, and counting/estimation. These remain challenging for modern Multimodal Large Language Models (MLLMs). We propose solving Euclidean geometry problems as a surrogate task and construct Euclid30K, a dataset of roughly 30K 2D and 3D geometry questions. We then fine‑tune Qwen2.5‑VL and RoboBrain2.0 models with Group Relative Policy Optimization (GRPO), enabling the models to internalize and apply Euclidean principles for shape recognition, counting, relation extraction, and multi‑step deductive reasoning. Without task‑specific adaptations, our models achieve significant zero‑shot gains on four spatial‑reasoning benchmarks: Super‑CLEVR, Omni3DBench, VSI‑Bench, and MindCube. For example, on VSI‑Bench, average accuracy improves from 34.5% to 40.5% (+5.5 percentage points); RoboBrain2.0‑Euclid‑7B reaches 49.6%, surpassing the previous SOTA (Spatial‑MLLM).
