@@ -23,7 +23,7 @@ Evaluation
 
 ### 2) Training
 
-Below is an example command for training (e.g., 8 GPUs). For multi‑node multi‑GPU training, see the example script `train/dist_train.sh`.
+Below is an example command for training (e.g., 8 GPUs). For multi‑node multi‑GPU training, see the example script [train/dist_train.sh](train/dist_train.sh).
 
 ```bash
 python3 -m verl.trainer.main \
