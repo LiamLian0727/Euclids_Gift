@@ -14,7 +14,7 @@ Spatial intelligence spans abilities such as visualizing and transforming shapes
 ![Gain](assert/gain.png)
 
 ## 📢 News
-- 🚀 [09/30/2025] We release our paper in [arXiv]() Euclid30K dataset in [huggingface](https://huggingface.co/datasets/LiamLian0727/Euclid30K).
+- 🚀 [09/30/2025] We release our paper in [arXiv](https://arxiv.org/abs/2509.24473) and Euclid30K dataset in [huggingface](https://huggingface.co/datasets/LiamLian0727/Euclid30K).
 
 ## Quick Start
 
