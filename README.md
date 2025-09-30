@@ -3,7 +3,7 @@
 [![forks](https://img.shields.io/github/forks/LiamLian0727/Euclids_Gift?style=flat&color=orange)](https://github.com/LiamLian0727/Euclids_Gift/fork)
 [![stars](https://img.shields.io/github/stars/LiamLian0727/Euclids_Gift?style=flat&color=red)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/LiamLian0727/Euclid30K)
-[![arXiv](https://img.shields.io/badge/arXiv-2509.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2509.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2509.24473-b31b1b.svg)](https://arxiv.org/abs/2509.24473)
 [![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
 
 ## Abstract
@@ -68,10 +68,10 @@ If you find this project or the dataset helpful, please cite:
     title={Euclid’s Gift: Enhancing Spatial Perception and Reasoning in Vision-Language Models via Geometric Surrogate Tasks},
     author={Shijie Lian and Changti Wu and Laurence Tianruo Yang and Hang Yuan and Bin Yu and Lei Zhang and Kai Chen},
     year={2025},
-    eprint={2505.09xxxx},
+    eprint={2509.24473},
     archivePrefix={arXiv},
-    primaryClass={cs.CL},
-    url={https://arxiv.org/abs/2505.09xxxx}
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2509.24473}
 }
 ```
 
