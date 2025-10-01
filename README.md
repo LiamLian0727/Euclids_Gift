@@ -2,7 +2,8 @@
 [![issues](https://img.shields.io/github/issues/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/issues)
 [![forks](https://img.shields.io/github/forks/LiamLian0727/Euclids_Gift?style=flat&color=orange)](https://github.com/LiamLian0727/Euclids_Gift/fork)
 [![stars](https://img.shields.io/github/stars/LiamLian0727/Euclids_Gift?style=flat&color=red)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
-[![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/LiamLian0727/Euclid30K)
+[![huggingface paper](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-FFD21E)](https://huggingface.co/papers/2509.24473)
+[![huggingface dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/LiamLian0727/Euclid30K)
 [![arXiv](https://img.shields.io/badge/arXiv-2509.24473-b31b1b.svg)](https://arxiv.org/abs/2509.24473)
 [![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
 
@@ -76,4 +77,5 @@ If you find this project or the dataset helpful, please cite:
 ```
 
 ## Acknowledgements
+
 We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://github.com/hiyouga/EasyR1) training framework, as well as the benchmark suites [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube).
