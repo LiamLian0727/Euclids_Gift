@@ -79,3 +79,6 @@ If you find this project or the dataset helpful, please cite:
 ## Acknowledgements
 
 We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://github.com/hiyouga/EasyR1) training framework, as well as the benchmark suites [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube](https://huggingface.co/datasets/MLL-Lab/MindCube).
+
+## ⭐ Stargazers
+[![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
