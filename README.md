@@ -15,7 +15,8 @@ Spatial intelligence spans abilities such as visualizing and transforming shapes
 ![Gain](assert/gain.png)
 
 ## 📢 News
-- 🚀 [09/30/2025] We release our paper in [arXiv](https://arxiv.org/abs/2509.24473) and Euclid30K dataset in [huggingface](https://huggingface.co/datasets/LiamLian0727/Euclid30K).
+- :newspaper: [10/17/2025] Thanks to Synced (机器之心) for covering our work in [this](https://mp.weixin.qq.com/s/OfCiijFuj1nITUyAF7Svfw)
+- [09/30/2025] We release our paper in [arXiv](https://arxiv.org/abs/2509.24473) and Euclid30K dataset in [huggingface](https://huggingface.co/datasets/LiamLian0727/Euclid30K).
 
 ## Quick Start
 
@@ -82,3 +83,4 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
