@@ -8,7 +8,7 @@
 [![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
 
 ## 📢 News
-- [10/17/2025] :newspaper: Thanks to Synced (机器之心) for covering our work: [WeChat article](https://mp.weixin.qq.com/s/OfCiijFuj1nITUyAF7Svfw).
+- [10/17/2025] :newspaper: Thanks to Synced (机器之心) for covering our work: [wechat article](https://mp.weixin.qq.com/s/OfCiijFuj1nITUyAF7Svfw) / [zhihu](https://zhuanlan.zhihu.com/p/1962478345846501995).
 - [09/30/2025] We release our paper in [arXiv](https://arxiv.org/abs/2509.24473) and Euclid30K dataset in [huggingface](https://huggingface.co/datasets/LiamLian0727/Euclid30K).
 
 ## Abstract
@@ -83,6 +83,7 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
 
 
 
