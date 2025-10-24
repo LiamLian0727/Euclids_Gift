@@ -2,7 +2,7 @@
 [![issues](https://img.shields.io/github/issues/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/issues)
 [![forks](https://img.shields.io/github/forks/LiamLian0727/Euclids_Gift?style=flat&color=orange)](https://github.com/LiamLian0727/Euclids_Gift/fork)
 [![stars](https://img.shields.io/github/stars/LiamLian0727/Euclids_Gift?style=flat&color=red)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
-[![huggingface model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-FFD21E)](https://huggingface.co/collections/LiamLian0727/euclid-model)
+[![huggingface model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-FFD21E)](https://huggingface.co/collections/LiamLian0727/euclid-model)
 [![huggingface dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/LiamLian0727/Euclid30K)
 [![arXiv](https://img.shields.io/badge/arXiv-2509.24473-b31b1b.svg)](https://arxiv.org/abs/2509.24473)
 [![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
@@ -103,6 +103,7 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
 
 
 
