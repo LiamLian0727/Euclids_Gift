@@ -2,13 +2,32 @@
 [![issues](https://img.shields.io/github/issues/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/issues)
 [![forks](https://img.shields.io/github/forks/LiamLian0727/Euclids_Gift?style=flat&color=orange)](https://github.com/LiamLian0727/Euclids_Gift/fork)
 [![stars](https://img.shields.io/github/stars/LiamLian0727/Euclids_Gift?style=flat&color=red)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
-[![huggingface paper](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-FFD21E)](https://huggingface.co/papers/2509.24473)
+[![huggingface model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-FFD21E)](https://huggingface.co/collections/LiamLian0727/euclid-model)
 [![huggingface dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/LiamLian0727/Euclid30K)
 [![arXiv](https://img.shields.io/badge/arXiv-2509.24473-b31b1b.svg)](https://arxiv.org/abs/2509.24473)
 [![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
 
 ## 📢 News
-- [10/17/2025] :newspaper: Thanks to Synced (机器之心) for covering our work: [wechat article](https://mp.weixin.qq.com/s/OfCiijFuj1nITUyAF7Svfw) / [zhihu](https://zhuanlan.zhihu.com/p/1962478345846501995).
+
+- [10/24/2025] We trained Qwen3VL (4B, 8B, and 30B) using Euclid30K, and the results show that the models also achieve significant gains across various spatial intelligence tasks. The weights of the fine-tuned models are available [here](https://huggingface.co/collections/LiamLian0727/euclid-model).
+
+<div align="center">
+  
+| Model               | SuperClevr         | Omni3D Bench       | VSIBench         | MindCube          |
+| :------------------ | :----------------: | :----------------: | :---------------: | :---------------: |
+| Qwen3VL-4B          | 55.36              | 27.74              | 35.51             | 26.11             |
+| Qwen3VL-Euclid-4B   | 61.24 **(+5.88)**  | 31.74 **(+4.00)**  | 42.26 **(+6.75)** | 32.98 **(+6.87)** |
+| Qwen3VL-8B          | 48.30              | 34.01              | 33.25             | 34.16             |
+| Qwen3VL-Euclid-8B   | 48.96 **(+0.66)**  | 35.03 **(+1.02)**  | 35.54 **(+2.29)** | 41.02 **(+6.86)** |
+| Qwen3VL-30B         | 64.12              | 36.71              | 40.00             | 39.75             |
+| Qwen3VL-Euclid-30B  | 70.18 **(+6.06)**  | 38.90 **(+2.19)**  | 45.80 **(+5.80)** | 40.68 **(+0.93)** |
+
+</div>
+
+> Qwen3VL and Qwen3VL-Euclid are evaluated using the same prompting template defined in [test/eval_qwen.sh](test/eval_qwen.sh) to ensure a fair comparison. 
+
+  
+- [10/17/2025] Thanks to Synced (机器之心) for covering our work: [wechat article](https://mp.weixin.qq.com/s/OfCiijFuj1nITUyAF7Svfw) / [zhihu](https://zhuanlan.zhihu.com/p/1962478345846501995).
 - [09/30/2025] We release our paper in [arXiv](https://arxiv.org/abs/2509.24473) and Euclid30K dataset in [huggingface](https://huggingface.co/datasets/LiamLian0727/Euclid30K).
 
 ## Abstract
@@ -48,7 +67,6 @@ python3 -m verl.trainer.main \
     worker.actor.clip_ratio_low=0.2 \
     worker.actor.clip_ratio_high=0.28 \
     worker.reward.reward_function=/mnt/code/Euclids_Gift/train/euclid.py:compute_score \
-    algorithm.online_filtering=True \
     trainer.total_epochs=10 \
     trainer.n_gpus_per_node=8 \
     trainer.nnodes=2 \
@@ -62,6 +80,8 @@ python3 -m verl.trainer.main \
 Use [`test/eval_qwen.sh`](test/eval_qwen.sh), [`test/eval_robo.sh`](test/eval_robo.sh), and [`test/eval_euclid.sh`](test/eval_euclid.sh) to evaluate the Qwen2.5‑VL series, the RoboBrain 2.0 series, and Euclid models trained on Euclid30K, respectively.
 
 Before running these scripts, set `model_path` in each script to the path of the model you want to evaluate.
+
+> Notably, our VSIBench evaluation differs from the original setup: the original limits the model’s output to 16 tokens and asks it to produce the final answer directly, whereas we allow up to 1024 tokens and instruct the model to think first and then answer, so that responses provide traceable reasoning and the necessary explanations expected in real-world use.
 
 ## Citation
 If you find this project or the dataset helpful, please cite:
@@ -83,6 +103,7 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
 
 
 
