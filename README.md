@@ -9,7 +9,7 @@
 
 ## 📢 News
 
-- [10/24/2025] We trained Qwen3VL (4B, 8B, and 30B) using Euclid30K, and the results show that the models also achieve significant gains across various spatial intelligence tasks. The weights of the fine-tuned models are available [here](https://huggingface.co/collections/LiamLian0727/euclid-model).
+- [10/24/2025] :zap: We trained Qwen3VL (4B, 8B, and 30B) using Euclid30K, and the results show that the models also achieve significant gains across various spatial intelligence tasks. The weights of the fine-tuned models are available [here](https://huggingface.co/collections/LiamLian0727/euclid-model).
 
 <div align="center">
   
@@ -103,6 +103,7 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
 
 
 
