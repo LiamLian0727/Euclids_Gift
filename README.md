@@ -13,7 +13,7 @@
 
 <div align="center">
   
-| Model               | SuperClevr         | Omni3D Bench       | VSIBench         | MindCube          |
+| Model               | SuperClevr         | Omni3D Bench       | VSIBench*         | MindCube          |
 | :------------------ | :----------------: | :----------------: | :---------------: | :---------------: |
 | Qwen3VL-4B          | 55.36              | 27.74              | 35.51             | 26.11             |
 | Qwen3VL-Euclid-4B   | 61.24 **(+5.88)**  | 31.74 **(+4.00)**  | 42.26 **(+6.75)** | 32.98 **(+6.87)** |
@@ -103,6 +103,7 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
 
 
 
