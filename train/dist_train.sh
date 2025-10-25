@@ -49,7 +49,6 @@ if [ "$NODE_RANK" -eq 0 ]; then
         worker.actor.clip_ratio_low=0.2 \
         worker.actor.clip_ratio_high=0.28 \
         worker.reward.reward_function=/mnt/code/Euclids_Gift/train/euclid.py:compute_score \
-        algorithm.online_filtering=True \
         trainer.total_epochs=10 \
         trainer.n_gpus_per_node=8 \
         trainer.nnodes=2 \
