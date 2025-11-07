@@ -17,5 +17,5 @@ python3 -m lmms_eval \
     --batch_size 1 \
     --log_samples \
     --log_samples_suffix vllm \
-    --output_path ./output/Qwen25VL7B \
+    --output_path ./output/Qwen3VL4B_Euclid \
     --verbosity DEBUG \
