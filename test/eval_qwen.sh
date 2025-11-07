@@ -6,7 +6,9 @@ export NCCL_TIMEOUT=18000000
 export NCCL_DEBUG=DEBUG
 # export TORCH_CUDA_ARCH_LIST="9.0"
 
-model_path=/mnt/models/Qwen2.5-VL-7B-Instruct
+# model_path=/mnt/models/Qwen2.5-VL-7B-Instruct
+# model_path=/mnt/models/Qwen3-VL-4B-Instruct
+model_path=/mnt/models/Qwen3-VL-4B-Euclid/global_step_xxx/actor/huggingface
 
 python3 -m lmms_eval \
     --model vllm \
