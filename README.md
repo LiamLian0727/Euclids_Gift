@@ -81,7 +81,8 @@ Use [`test/eval_qwen.sh`](test/eval_qwen.sh), [`test/eval_robo.sh`](test/eval_ro
 
 Before running these scripts, set `model_path` in each script to the path of the model you want to evaluate.
 
-> Notably, our VSIBench evaluation differs from the original setup: the original limits the model’s output to 16 tokens and asks it to produce the final answer directly, whereas we allow up to 1024 tokens and instruct the model to think first and then answer, so that responses provide traceable reasoning and the necessary explanations expected in real-world use.
+> Notably, as noted in VSIBench, **spatial reasoning ability is the primary bottleneck limiting MLLM performance on the VSI-Bench test**. Therefore, to better demonstrate how models perceive scenes and perform spatial reasoning, and to verify whether they genuinely acquire spatial intelligence from geometric knowledge, we deviate from the original VSI-Bench setup, which uses prompts such as "*Answer with the option's letter from the given choices directly*" or "*Please answer the question using a single word or phrase*" and constrains the maximum response length to 16 tokens. Instead, we follow the prompt configuration described in RoboBrain2.0 Sec. B, which encourages the model to first reason about the problem before providing an answer, and we set the maximum response length to 1024 tokens. This setup allows us to observe the model's intermediate reasoning process and assess whether it has internalized transferable spatial priors from Euclid30K training.
+
 
 ## Citation
 If you find this project or the dataset helpful, please cite:
@@ -103,6 +104,7 @@ We thank the [VeRL](https://github.com/volcengine/verl) / [EasyR1](https://githu
 
 ## ⭐ Stargazers
 [![Stargazers repo roster for @LiamLian0727/Euclids_Gift](https://reporoster.com/stars/LiamLian0727/Euclids_Gift)](https://github.com/LiamLian0727/Euclids_Gift/stargazers)
+
 
 
 
