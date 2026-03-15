@@ -8,8 +8,8 @@
 [![license](https://img.shields.io/github/license/LiamLian0727/Euclids_Gift)](LICENSE)
 
 ## 📢 News
-
-- [10/24/2025] :zap: We trained Qwen3VL (4B, 8B, and 30B) using Euclid30K, and the results show that the models also achieve significant gains across various spatial intelligence tasks. The weights of the fine-tuned models are available [here](https://huggingface.co/collections/LiamLian0727/euclid-model).
+- [02/21/2026]⚡: `Euclid’s Gift` has been accepted to **CVPR 2026 Findings**.
+- [10/24/2025]: We trained Qwen3VL (4B, 8B, and 30B) using Euclid30K, and the results show that the models also achieve significant gains across various spatial intelligence tasks. The weights of the fine-tuned models are available [here](https://huggingface.co/collections/LiamLian0727/euclid-model).
 
 <div align="center">
   
