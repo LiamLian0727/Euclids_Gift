@@ -39,7 +39,11 @@ Spatial intelligence spans abilities such as visualizing and transforming shapes
 
 ## Quick Start
 
-### 1) Environment Setup
+### 1) Use Euclid30K as Benchmark
+
+Evaluate a multimodal model or agent on the 500-question Euclid30K validation split using the [benchmark runner and answer-grading protocol](test/euclid30k/README.md). The runner supports local vLLM inference and scoring saved agent predictions.
+
+### 2) Environment Setup
 Training
 - Install [EasyR1](https://github.com/hiyouga/EasyR1) following the official documentation.
 - Install the required Python dependencies: `pip install -r requirements.txt`.
@@ -51,7 +55,7 @@ Evaluation
   - Copy the four task folders provided under `test/lmms_eval/tasks/` into your existing lmms‑eval setup.
 - Download the benchmark datasets [Super‑CLEVR](https://huggingface.co/datasets/MMInstruction/SuperClevr_Val), [Omni3DBench](https://huggingface.co/datasets/dmarsili/Omni3D-Bench), [VSI‑Bench](https://huggingface.co/datasets/nyu-visionx/VSI-Bench), and [MindCube_lmms_eval](https://huggingface.co/datasets/LiamLian0727/MindCube_lmms_eval); then update the dataset paths in each corresponding YAML under `test/lmms_eval/tasks/`.
 
-### 2) Training
+### 3) Training
 
 Below is an example command for training (e.g., 8 GPUs). For multi‑node multi‑GPU training, see the example script [train/dist_train.sh](train/dist_train.sh).
 
@@ -73,7 +77,7 @@ python3 -m verl.trainer.main \
     trainer.save_checkpoint_path=/mnt/models/Qwen2.5-VL-7B-Euclid
 ```
 
-### 3) Evaluation
+### 4) Evaluation
 
 ![Evaluation](assert/eval.png)
 

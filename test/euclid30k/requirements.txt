@@ -1,0 +1,5 @@
+huggingface-hub>=0.34,<2
+math-verify[antlr4_13_2]==0.9.0
+openai>=1.50,<3
+Pillow
+pyarrow
