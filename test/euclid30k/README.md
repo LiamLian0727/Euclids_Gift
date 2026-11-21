@@ -34,11 +34,6 @@ Use fresh output directories for each run.
 Some training examples contain up to eight images. If your server sets a
 per-request image limit or a context limit, size it for those inputs.
 
-The baseline sends the original problem and images with a short final-answer
-instruction. Generation uses temperature 0, top-p 1, seed 0 and a 4,096-token
-output cap. `run.json` records the generation settings. Record the model
-revision, vLLM version, and any changes to the server's image processing or
-chat template when reporting a score.
 
 ## Grade an agent or an existing run
 
