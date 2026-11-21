@@ -1,11 +1,10 @@
 # Euclid30K benchmark
 
-Euclid30K Benchmark v1 evaluates the 500 public validation examples in
+Euclid30K Benchmark evaluates the 500 public validation examples in
 [Euclid30K](https://huggingface.co/datasets/LiamLian0727/Euclid30K). The runner
 downloads the selected Parquet file from the dataset's default branch.
 Use `validation` for benchmark reporting. The standalone runner also supports
-the 29,195-example `train` split for diagnostics. Label scores from checkpoints
-exposed to Euclid30K validation during model selection or tuning accordingly.
+the 29,195-example `train` split for diagnostics. 
 
 ## Run a local vLLM baseline
 
