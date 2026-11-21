@@ -8,7 +8,7 @@ from math_verify import LatexExtractionConfig, parse, verify
 from sympy import Eq, Expr, Set, Symbol, Tuple
 from sympy.core.relational import Relational
 
-PROTOCOL = "euclid30k-v1.1"
+PROTOCOL = "euclid30k"
 REL_TOL = 1e-6
 BOX = re.compile(r"\\(?:boxed|fbox)\s*\{")
 BOX_SEPARATOR = re.compile(r"[\s$]*(?:[,;，；]|and|\\text\{\s*and\s*\})[\s$]*", re.IGNORECASE)
