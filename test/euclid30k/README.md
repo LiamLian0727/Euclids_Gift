@@ -39,11 +39,6 @@ per-request image limit or a context limit, size it for those inputs.
 - Grade the last `\boxed{...}` or `\fbox{...}` in the final answer section.
   The scorer discards closed reasoning blocks and uses the section starting at
   the last explicit final-answer line, when present. A bare answer also works.
-- Normalize presentation before comparing answers. For example, `30°` and
-  `30^{\circ}` represent the same degree value. If both answers include a
-  recognized metric length, area or volume unit, the units must match.
-- Compare choice letters and simple labels directly. Compare top-level comma-
-  or semicolon-separated answers in order, with each part graded independently.
 - Use Math-Verify for symbolic equivalence. Finite scalar integers require an
   exact value. Other finite scalars use a relative tolerance of `1e-6`, with
   zero absolute tolerance. A missing or ungradable final answer scores zero.
