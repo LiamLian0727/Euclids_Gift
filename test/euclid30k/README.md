@@ -36,16 +36,9 @@ per-request image limit or a context limit, size it for those inputs.
 
 ## Answer rules
 
-The v1.1 grader normalizes reference notation such as `\number{...}` and
-degree signs, and checks for conflicting explicit units such as centimeters
-and inches. It uses the same generation settings as v1. For comparisons,
-rescore saved predictions with the same grader version.
-
 - Grade the last `\boxed{...}` or `\fbox{...}` in the final answer section.
   The scorer discards closed reasoning blocks and uses the section starting at
   the last explicit final-answer line, when present. A bare answer also works.
-  For multi-part answers, adjacent boxes joined by a separator or “and” are
-  graded in order.
 - Use Math-Verify for symbolic equivalence. Finite scalar integers require an
   exact value. Other finite scalars use a relative tolerance of `1e-6`, with
   zero absolute tolerance. A missing or ungradable final answer scores zero.
