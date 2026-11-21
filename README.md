@@ -41,7 +41,7 @@ Spatial intelligence spans abilities such as visualizing and transforming shapes
 
 ### 1) Use Euclid30K as Benchmark
 
-Evaluate a multimodal model or agent on the 500-question Euclid30K validation split using the [benchmark runner and answer-grading protocol](test/euclid30k/README.md). The runner supports local vLLM inference and scoring saved agent predictions.
+Evaluate a multimodal model or agent on the 500-question Euclid30K validation split using the [benchmark runner and answer-grading protocol](test/euclid30k/README.md).
 
 ### 2) Environment Setup
 Training
