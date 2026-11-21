@@ -34,19 +34,7 @@ Use fresh output directories for each run.
 Some training examples contain up to eight images. If your server sets a
 per-request image limit or a context limit, size it for those inputs.
 
-
-## Grade an agent or an existing run
-
-Submit one JSON object per line with an `id` and a string `response`.
-IDs use the zero-based Parquet row order, for example `validation:0`.
-Use the agent's submitted final answer as `response`. The same scorer also
-extracts a final answer from model output. `score` checks that the IDs cover
-the selected rows exactly, so omitting failed generations cannot raise the
-reported accuracy. Record a completed trial with no final answer as an empty
-string. The scorer writes per-example decisions to `scores.jsonl` and overall
-accuracy to `summary.json`.
-
-### Answer rules
+## Answer rules
 
 - Grade the last `\boxed{...}` or `\fbox{...}` in the final answer section.
   The scorer discards closed reasoning blocks and uses the section starting at
