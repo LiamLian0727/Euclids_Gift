@@ -49,18 +49,3 @@ per-request image limit or a context limit, size it for those inputs.
   zero absolute tolerance. A missing or ungradable final answer scores zero.
   Accuracy is the fraction correct over the selected rows.
 
-For a comparison, use the same dataset files, answer rules and denominator
-for every method. Report model-only and agent inference budgets alongside
-accuracy, including any tool, critic or retry calls. Audit grading changes on
-saved outputs and use a versioned protocol for published scores.
-
-The scorer uses the published reference strings. In `validation:281`, the
-question lets the solver choose one of three conditions, while the reference
-lists the answers for all three. The ordered-answer rule can mark a valid
-single-condition answer incorrect on this item. Record it during error review.
-
-[Visual Board §4.1](https://arxiv.org/html/2611.23872v1#S4.SS1) reports
-500 held-out Euclid30K questions, an output cap of 4,096 tokens for single-model
-baselines, and symbolic/numeric equivalence for geometry answers. The paper does
-not give the Euclid30K row IDs, exact extraction rules or numeric tolerance.
-Euclid30K Benchmark v1 defines its own reproducible protocol.
